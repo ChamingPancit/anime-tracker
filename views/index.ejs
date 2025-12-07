@@ -1,0 +1,40 @@
+<%- include('./partials/header') %>
+    <a href="/add-form" class="btn addAnime button-22">Add Anime</a>
+    <div class="animeContainer">
+        <% animes.forEach(anime=> {%>
+            <div class="animeCard">
+                <img src="<%= anime.cover %>" alt="anime-cover" class="animeCover">
+                <h3>
+                    <%= anime.title %>
+                </h3>
+                <p>Rating: <%= anime.rating %>
+                </p>
+                <p>
+                    <%= anime.date_watched.toLocaleDateString('en-US', { year: 'numeric' , month: 'short' ,
+                        day: 'numeric' }) %>
+                </p>
+                <p>Notes: <%= anime.notes %>
+                </p>
+
+                <div class="hoverBox">
+                    <p><strong>Episodes:</strong>
+                        <%= anime.episodes %>
+                    </p>
+                    <p><strong>MAL Rating:</strong>
+                        <%= anime.malrating %>
+                    </p>
+                    <p><strong>Status:</strong>
+                        <%= anime.status %>
+                    </p>
+                </div>
+
+                <form action="/delete/<%= anime.id %>" method="POST">
+                    <input type="hidden" name="animeId" id="" value="<%= anime.id %>">
+                    <button type="submit" class="btn deleteBtn">Delete</button>
+                </form>
+            </div>
+            <%}); %>
+    </div>
+
+
+    <%- include('./partials/footer') %>
