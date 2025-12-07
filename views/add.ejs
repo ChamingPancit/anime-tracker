@@ -1,13 +1,6 @@
 <%- include('./partials/header') %>
 
-    <div class="formBox">
-        <form action="/search" method="post">
-            <input type="text" name="animeTitle" id="" placeholder="Search Anime Title" required>
-            <button type="submit">Search</button>
-        </form>
-        <a href="/" class="btn">Home</a>
-
-    </div>
+   
     <div class="animeContainer">
         <% animes.forEach(anime=> {%>
 

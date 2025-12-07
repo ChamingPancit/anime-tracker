@@ -15,21 +15,25 @@ A full-stack web application for tracking your favorite anime series. Search fro
 ## Tech Stack
 
 **Frontend:**
+
 - EJS (Embedded JavaScript templating)
 - HTML5
 - CSS3 (Flexbox, transitions, hover effects)
 
 **Backend:**
+
 - Node.js
 - Express.js
 - PostgreSQL
 
 **APIs:**
+
 - Jikan v4 API (MyAnimeList data source)
 
 ## Installation
 
 ### Prerequisites
+
 - Node.js and npm installed
 - PostgreSQL database
 - Git
@@ -37,17 +41,20 @@ A full-stack web application for tracking your favorite anime series. Search fro
 ### Setup
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd anime-list
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Create a PostgreSQL database and table:
+
 ```sql
 CREATE TABLE anime (
   id SERIAL PRIMARY KEY,
@@ -65,11 +72,13 @@ CREATE TABLE anime (
 4. Configure database connection in `index.js`
 
 5. Start the server:
+
 ```bash
 npm start
 ```
 
 Or with nodemon for development:
+
 ```bash
 nodemon index.js
 ```
@@ -80,7 +89,7 @@ nodemon index.js
 
 1. **Search Anime**: Click "Add Anime" button, search for anime titles
 2. **Add to Collection**: Click "Add to My List" on search results
-3. **Enter Details**: 
+3. **Enter Details**:
    - Date watched (when you completed it)
    - Your rating (1-10 scale)
    - Personal notes
@@ -108,6 +117,7 @@ anime-list/
 ## API Integration
 
 Uses the **Jikan v4 API** (https://jikan.moe/) for anime data:
+
 - Search endpoint: `/anime?q=search_term`
 - Details endpoint: `/anime/{mal_id}`
 
