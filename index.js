@@ -6,6 +6,9 @@ import bcrypt from "bcrypt";
 import session from "express-session";
 import passport from "passport";
 import { Strategy } from "passport-local";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const PORT = 3000;
@@ -18,7 +21,7 @@ app.use(express.static("public"));
 
 app.use(
   session({
-    secret: "HELLO WORLD",
+    secret: process.env.SESSION_SECRET || "HELLO WORLD",
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -31,11 +34,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "animeList",
-  password: "123456",
-  port: "5432",
+  user: process.env.DB_USER || "postgres",
+  host: process.env.DB_HOST || "localhost",
+  database: process.env.DB_NAME || "animeList",
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT || "5432",
 });
 
 try {
