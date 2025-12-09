@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime List</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <form action="/login" method="post">
+        <input type="email" name="email" required>
+        <input type="password" name="password" required>
+        <button class="submit">Log in</button>
+    </form>
+    <a type="button" href="/register">Register</a>
+
+    <%- include('./partials/footer') %>
