@@ -212,3 +212,54 @@ nav .btn {
   background: transparent;
   border: none;
 }
+
+.introPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #fef8f2;
+}
+
+.introPage form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+}
+
+.introPage input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.introPage .submit {
+  padding: 10px;
+  background-color: #2b2d42;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.introPage .submit:hover {
+  background-color: #042751;
+}
+
+.introPage a {
+  margin-top: 15px;
+  color: #2b2d42;
+  text-decoration: none;
+  font-size: 14px;
+}

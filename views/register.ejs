@@ -9,10 +9,12 @@
 </head>
 
 <body>
-    <form action="/register" method="post">
-        <input type="email" name="email" required>
-        <input type="text" name="username" required>
-        <input type="password" name="password" required>
-        <button class="submit">Submit</button>
-    </form>
+    <div class="introPage">
+        <form action="/register" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button class="submit">Register</button>
+        </form>
+    </div>
     <%- include('./partials/footer') %>
